@@ -1,0 +1,12 @@
+mat-sidenav-container.sidenav-container
+  mat-sidenav.sidenav(#drawer, fixedInViewport="true", [attr.role]="isHandset ? 'dialog' : 'navigation'", [mode]="(isHandset | async)!.matches ? 'over' : 'side'", [opened]="!(isHandset | async)!.matches")
+    mat-toolbar(color='primary') Menu
+    mat-nav-list
+      a(mat-list-item href='#') Link 1
+      a(mat-list-item href='#') Link 2
+      a(mat-list-item href='#') Link 3
+  mat-sidenav-content
+    mat-toolbar(color='primary')
+      button(type='button', aria-label='Toggle sidenav', mat-icon-button, (click)='drawer.toggle()', *ngIf='(isHandset | async)!.matches')
+        mat-icon(aria-label='Side nav toggle icon') menu
+      span Application Title
