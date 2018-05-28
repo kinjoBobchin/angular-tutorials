@@ -5,13 +5,17 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import {
+  MatToolbarModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatListModule
+} from '@angular/material';
+import { ReferenceListComponent } from './reference-list/reference-list.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainNavComponent
-  ],
+  declarations: [AppComponent, MainNavComponent, ReferenceListComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -25,4 +29,4 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
